@@ -1,0 +1,15 @@
+﻿@model IReadOnlyList<Asignatura>
+
+@{
+    ViewData["Title"] = "All Assingments";
+    Layout = "_SimpleLayout";
+}
+
+
+
+<h1>@ViewBag.Title</h1>
+<section>
+    <partial name="ListSchoolEntity" />
+    <p> <i>@ViewBag.Date</i></p>
+</section>
+

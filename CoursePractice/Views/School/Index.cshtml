@@ -1,0 +1,25 @@
+﻿@model Escuela
+
+@{
+    ViewData["Title"] = "School Information";
+    Layout = "_SimpleLayout";
+}
+
+<section>
+    <h1>@ViewData["Title"]</h1>
+    <h2>Name:  @Model.Nombre</h2>
+    <h3>School type: @Model.TipoEscuela</h3>
+    <p> <strong>Foundation year: @Model.AñoDeCreación</strong>  </p>
+    <address>
+        <p>Direccion: @Model.Dirección </p>
+        <p>Country: @Model.Pais </p>
+        <p>City: @Model.Ciudad </p>
+    </address>
+</section>
+
+<!--
+    Dinamic props with View data and View bag
+    <p> <i> @ViewData["DinamicProp"]</i> </p>
+    <p> <i> @ViewBag.DinamicProp </i> </p>
+-->
+
