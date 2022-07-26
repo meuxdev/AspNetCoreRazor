@@ -1,6 +1,6 @@
 using System;
 
-namespace CoursePractice.Models
+namespace AspNetCoreRazor.Models
 {
     public class ErrorViewModel
     {

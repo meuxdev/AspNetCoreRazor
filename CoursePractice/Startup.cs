@@ -1,4 +1,4 @@
-﻿using CoursePractice.Models;
+﻿using AspNetCoreRazor.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CoursePractice
+namespace AspNetCoreRazor
 {
     public class Startup
     {

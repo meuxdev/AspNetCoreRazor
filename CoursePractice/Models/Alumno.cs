@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace CoursePractice.Models
+namespace AspNetCoreRazor.Models
 {
     public class Alumno: ObjetoEscuelaBase
     {

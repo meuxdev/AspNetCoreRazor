@@ -1,4 +1,4 @@
-namespace CoursePractice.Models
+namespace AspNetCoreRazor.Models
 {
     public enum TiposEscuela
     {

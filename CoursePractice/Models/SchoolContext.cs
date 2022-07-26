@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace CoursePractice.Models
+namespace AspNetCoreRazor.Models
 {
     public class SchoolContext : DbContext
     {

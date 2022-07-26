@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using CoursePractice.Models;
+using AspNetCoreRazor.Models;
 using System.Collections.Generic;
 
-namespace CoursePractice.Controllers
+namespace AspNetCoreRazor.Controllers
 {
     public class AsignaturaController : Controller
     {

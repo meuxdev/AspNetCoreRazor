@@ -1,4 +1,4 @@
-﻿using CoursePractice.Models;
+﻿using AspNetCoreRazor.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CoursePractice.Controllers
+namespace AspNetCoreRazor.Controllers
 {
     public class HomeController : Controller
     {
