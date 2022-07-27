@@ -1,4 +1,4 @@
-﻿@model Escuela
+﻿@model School
 
 @{
     ViewData["Title"] = "School Information";
@@ -7,13 +7,13 @@
 
 <section>
     <h1>@ViewData["Title"]</h1>
-    <h2>Name:  @Model.Nombre</h2>
-    <h3>School type: @Model.TipoEscuela</h3>
-    <p> <strong>Foundation year: @Model.AñoDeCreación</strong>  </p>
+    <h2>Name:  @Model.Name</h2>
+    <h3>School type: @Model.SchoolType</h3>
+    <p> <strong>Foundation year: @Model.CreationDate</strong>  </p>
     <address>
-        <p>Direccion: @Model.Dirección </p>
-        <p>Country: @Model.Pais </p>
-        <p>City: @Model.Ciudad </p>
+        <p>Address: @Model.Address</p>
+        <p>Country: @Model.Country </p>
+        <p>City: @Model.City </p>
     </address>
 </section>
 

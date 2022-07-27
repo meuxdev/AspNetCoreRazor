@@ -6,7 +6,7 @@ namespace AspNetCoreRazor.Models
     {
         public string Id { get; set; }
 
-        public string Nombre { get; set; }
+        public string Name { get; set; }
 
         public ObjetoEscuelaBase()
         {
@@ -15,7 +15,7 @@ namespace AspNetCoreRazor.Models
 
         public override string ToString()
         {
-            return $"{Nombre},{Id}";
+            return $"{Name},{Id}";
         }
     }
 }

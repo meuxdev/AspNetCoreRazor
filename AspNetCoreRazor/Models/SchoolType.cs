@@ -1,6 +1,6 @@
 namespace AspNetCoreRazor.Models
 {
-    public enum TiposEscuela
+    public enum SchoolType
     {
         Primaria, 
         Secundaria, 

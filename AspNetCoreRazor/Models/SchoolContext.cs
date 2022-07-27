@@ -7,15 +7,15 @@ namespace AspNetCoreRazor.Models
 {
     public class SchoolContext : DbContext
     {
-        public DbSet<Escuela> Schools { get; set; }
+        public DbSet<School> Schools { get; set; }
 
-        public DbSet<Asignatura> Assignments { get; set; }
+        public DbSet<Assignment> Assignments { get; set; }
 
-        public DbSet<Evaluaciones> Evaluations { get; set; }
+        public DbSet<Grade> Grades { get; set; }
 
-        public DbSet<Alumno> Students { get; set; }
+        public DbSet<Student> Students { get; set; }
 
-        public DbSet<Curso> Cursos { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
         public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
         {
@@ -28,64 +28,64 @@ namespace AspNetCoreRazor.Models
             // Executes the base function
             base.OnModelCreating(modelBuilder);
 
-            var school = new Escuela()
+            var school = new School()
             {
                 Id = Guid.NewGuid().ToString(),
-                AñoDeCreación = 2005,
-                Nombre = "Platzi",
-                Pais = "Colombia",
-                Dirección = "Random Direccion.",
-                Ciudad = "Bogota",
-                TipoEscuela = TiposEscuela.Online
+                CreationDate = 2005,
+                Name = "Platzi",
+                Country = "Colombia",
+                Address = "Random Direccion.",
+                City = "Bogota",
+                SchoolType = SchoolType.Online
             };
 
-            
-            modelBuilder.Entity<Escuela>().HasData(school); // adding the school with the has data method 
-            modelBuilder.Entity<Alumno>().HasData(GenerateRandomStudents().ToArray()); // Important send a single item or an array.
-            modelBuilder.Entity<Asignatura>().HasData(GenerateRandomAssingments().ToArray());
+
+            modelBuilder.Entity<School>().HasData(school); // adding the school with the has data method 
+            modelBuilder.Entity<Student>().HasData(GenerateRandomStudents().ToArray()); // Important send a single item or an array.
+            modelBuilder.Entity<Assignment>().HasData(GenerateRandomAssingments().ToArray());
         }
-        private IReadOnlyList<Alumno> GenerateRandomStudents()
+        private IReadOnlyList<Student> GenerateRandomStudents()
         {
             string[] name = { "Freddy", "Alex", "Jorge", "Josh", "Chris" };
             string[] middleName = { "Felix", "John", "Robert", "Samuel", "Rick" };
             string[] lastName = { "Ruiz", "Trump", "Toledo", "Herrera" };
 
-            IEnumerable<Alumno> query = from n in name
-                                        from mn in middleName
-                                        from l in lastName
-                                        select new Alumno { Nombre = n + mn + l, Id = Guid.NewGuid().ToString() };
+            IEnumerable<Student> query = from n in name
+                                         from mn in middleName
+                                         from l in lastName
+                                         select new Student { Name = n + mn + l, Id = Guid.NewGuid().ToString() };
 
-            return query.ToList<Alumno>();
-        } 
+            return query.ToList<Student>();
+        }
 
 
-        private IReadOnlyList<Asignatura> GenerateRandomAssingments()
+        private IReadOnlyList<Assignment> GenerateRandomAssingments()
         {
-            var assignmentsList = new List<Asignatura>() {
-                new Asignatura{
-                    Nombre = "Matemáticas",
+            var assignmentsList = new List<Assignment>() {
+                new Assignment{
+                    Name = "Matemáticas",
                     Id = Guid.NewGuid ().ToString ()
                 },
-                new Asignatura {
-                    Nombre = "Educación Física",
+                new Assignment {
+                    Name = "Educación Física",
                     Id = Guid.NewGuid ().ToString ()
                 },
-                new Asignatura {
-                    Nombre = "Castellano",
+                new Assignment {
+                    Name = "Castellano",
                     Id = Guid.NewGuid ().ToString ()
                 },
-                new Asignatura {
-                    Nombre = "Ciencias Naturales",
+                new Assignment {
+                    Name = "Ciencias Naturales",
                     Id = Guid.NewGuid ().ToString ()
                 },
-                new Asignatura {
-                    Nombre = "Programacion",
+                new Assignment {
+                    Name = "Programacion",
                     Id = Guid.NewGuid ().ToString ()
                 }
             };
 
             return assignmentsList;
-        }        
+        }
 
     }
 }

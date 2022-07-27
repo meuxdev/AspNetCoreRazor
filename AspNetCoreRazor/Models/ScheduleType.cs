@@ -1,6 +1,6 @@
 namespace AspNetCoreRazor.Models
 {
-    public enum TiposJornada
+    public enum ScheduleType
     {
         Mañana, Tarde, Noche
     }
