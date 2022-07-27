@@ -2,34 +2,31 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreRazor.Models;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace AspNetCoreRazor.Controllers
 {
-    public class StudentController : Controller
+    public class AssignmentController: Controller
     {
         private readonly SchoolContext _schoolContext;
 
-        public StudentController(SchoolContext schoolContext)
+        public AssignmentController(SchoolContext schoolContext)
         {
             _schoolContext = schoolContext;
         }
 
         public async Task<IActionResult> Index()
         {
-            var students = await _schoolContext.Students.FirstOrDefaultAsync(); // returning the first student
-            return View(students);
+            var assignment = await _schoolContext.Assignments.FirstOrDefaultAsync();
+            return View(assignment);
         }
 
         public IActionResult All()
         {
-            var students = _schoolContext.Students.ToList();
+            var listaAsignaturas = _schoolContext.Assignments.ToList();
             ViewBag.Date = DateTime.Now;
-            return View(students);
+            return View(listaAsignaturas);
         }
-
-
     }
 }
