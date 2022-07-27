@@ -16,17 +16,6 @@ namespace AspNetCoreRazor.Controllers
         public IActionResult Index()
         {
             var school = _context.Schools.FirstOrDefault();
-            //var school = new Escuela()
-            //{
-            //    UniqueId = Guid.NewGuid().ToString(),
-            //    AñoDeCreación = 2005,
-            //    Nombre = "Platzi",
-            //    Pais = "Colombia",
-            //    Dirección = "Random Direccion.",
-            //    Ciudad = "Bogota",
-            //    TipoEscuela = TiposEscuela.Online
-            //};
-
             ViewBag.DinamicProp = "My name is jeff!";
             return View(school);
         }

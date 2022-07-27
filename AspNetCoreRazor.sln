@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoursePractice", "CoursePractice\CoursePractice.csproj", "{7D909D5A-59BC-46DB-9083-261BC4C5037D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreRazor", "AspNetCoreRazor\AspNetCoreRazor.csproj", "{7D909D5A-59BC-46DB-9083-261BC4C5037D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
